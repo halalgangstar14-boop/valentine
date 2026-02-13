@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Special</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <meta property="og:title" content="Ousk3h D HG sent you a special surprise message 💌">
+    <meta property="og:description" content="Open this to see your Valentine's surprise...">
+    <meta property="og:image" content="https://your-link.com/preview-image.png">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <audio id="bgMusic" loop preload="auto"><source src="music.mp3" type="audio/mpeg"></audio>
+    <div id="phase1" class="container">
+        <div class="glass-box">
+            <h1 class="glow-text">Hey there... ❤️</h1>
+            <p>I have a very important question for you.</p>
+            <h2 class="question-text">Will you be my Valentine?</h2>
+            <button class="yes-btn" onclick="goToPhase2()">Yes, I will! ❤️</button>
+        </div>
+    </div>
+
+    <div id="phase2" class="container hidden">
+        <div class="glass-box">
+            <h2>Yay! Now we wait...</h2>
+            <p>Your special surprise unlocks in:</p>
+            <div id="timer">
+                <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+            </div>
+            <p class="hint">Something magic is coming. When countdown finish😁💕</p>
+        </div>
+    </div>
+
+    <div id="phase3" class="container hidden">
+        <div class="envelope-wrapper" onclick="openEnvelope()">
+            <div class="envelope">
+                <div class="front"></div>
+                <div class="top"></div>
+                <div class="card">
+                    <div class="letter">
+                        <p id="specialMessage"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="tap-hint">Tap the envelope to open your heart...</h3>
+    </div>
+
+    <footer>
+        <p class="cr">Copyright &copy; 2026 Ousk3h DMC</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

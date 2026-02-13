@@ -1,0 +1,60 @@
+body, html {
+    margin: 0; padding: 0; height: 100%; width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); /* Deep elegant dark theme */
+    display: flex; justify-content: center; align-items: center;
+    color: white; overflow: hidden;
+}
+
+.container { width: 90%; max-width: 450px; text-align: center; transition: 1s ease; }
+.glass-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 20px; border-radius: 30px;
+}
+
+.hidden { display: none !important; opacity: 0; }
+
+#timer { font-size: 2rem; color: #ff4d6d; margin: 25px 0; font-weight: bold; }
+
+/* 3D Envelope Styles */
+.envelope-wrapper {
+    position: relative; width: 280px; height: 180px;
+    background: #ff4d6d; margin: 0 auto; cursor: pointer;
+    transition: 0.5s; border-radius: 0 0 10px 10px;
+}
+
+.envelope-wrapper .top {
+    position: absolute; top: 0; left: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #d63384;
+    transform-origin: top; transition: 0.5s; z-index: 3;
+}
+
+.envelope-wrapper.open .top { transform: rotateX(180deg); }
+
+.card {
+    position: absolute; bottom: 10px; left: 10px;
+    background: white; width: 260px; height: 160px;
+    z-index: 2; transition: 0.5s; padding: 20px;
+    color: #333; box-sizing: border-box; border-radius: 5px;
+}
+
+.envelope-wrapper.open .card { transform: translateY(-120px); height: 250px; z-index: 4; }
+
+.letter { font-size: 0.9rem; line-height: 1.4; overflow-y: auto; height: 100%; }
+
+.tap-hint { margin-top: 150px; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+.cr {
+    text-align: center !important;
+    margin: 40px 0 20px 0;
+    justify-content: space-around;
+    display: flex block;
+    font-size: 14px;
+    color: #888888;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
